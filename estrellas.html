@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Rating</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="rating">
+  <div class="rating-row">
+    <span class="rating-num">5 stars</span>
+    <div class="stars" data-stars="5"></div>
+    <span class="rating-count">Excelente</span>
+  </div>
+  <div class="rating-row">
+    <span class="rating-num">4 stars</span>
+    <div class="stars" data-stars="4"></div>
+    <span class="rating-count"> Bien</span>
+  </div>
+  <div class="rating-row">
+    <span class="rating-num">3 stars</span>
+    <div class="stars" data-stars="3"></div>
+    <span class="rating-count">Normal</span>
+  </div>
+  <div class="rating-row">
+    <span class="rating-num">2 stars</span>
+    <div class="stars" data-stars="2"></div>
+    <span class="rating-count">Malo</span>
+  </div>
+  <div class="rating-row">
+    <span class="rating-num">1 star</span>
+    <div class="stars" data-stars="1"></div>
+    <span class="rating-count">Pesimo</span>
+  </div>
+</div>
+</body>
+</html>
+
+</body>
+
+
+<style>
+    .rating {
+  font-family: Arial, sans-serif;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+}
+
+.rating-num {
+  width: 60px;
+}
+
+.stars {
+  display: inline-block;
+  margin: 0 5px;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 20px;
+}
+
+.stars::before {
+  content: "★★★★★";
+  color: lightgray;
+  display: inline-block;
+}
+
+.stars[data-stars="5"]::before { content: "★★★★★"; color: orange; }
+.stars[data-stars="4"]::before { content: "★★★★"; color: orange; }
+.stars[data-stars="3"]::before { content: "★★★"; color: orange; }
+.stars[data-stars="2"]::before { content: "★★"; color: orange; }
+.stars[data-stars="1"]::before { content: "★"; color: orange; }
+
+.rating-count {
+  width: 30px;
+  text-align: right;
+}
+</style>
+</html>

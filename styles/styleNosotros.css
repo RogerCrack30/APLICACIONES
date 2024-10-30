@@ -1,0 +1,408 @@
+body{
+    margin: 0;
+    
+}
+:root{
+    --Azul : #233588;
+    --Rojo : #a01c1c;
+    --primario :#fab50f;
+    --fondo: #1381e1;
+   
+    }
+
+   .contenedor-header{
+  
+  
+   display: grid;
+   grid-template-columns: 0.5fr 2fr 0.5fr;
+   gap: 5px;
+   
+   background-color: var(--Rojo);
+   }
+
+
+   .contenedor-header a{
+color: white;
+    
+   }
+
+img{
+   position: relative;
+    padding: 1rem;
+    justify-self: center;
+}
+   
+    /*   --------------------------barra ------*/
+.form-barra{
+    display: grid;
+    gap: 1px
+    ;
+    grid-template-columns: 4fr 1fr;
+ }
+ 
+ .div-form{
+   margin: auto 0;
+ 
+   
+ }
+ 
+ .form-barra button  {
+ border-radius: 10px;
+ border: solid black;
+ }
+ 
+ .form-barra input  {
+    border-radius: 10px;
+    border: solid black;
+ }
+ 
+ 
+ 
+ 
+ button{
+    border-radius: 10px;
+    background-color: var(--primario);
+    color: white;
+ }
+ 
+   .combo {
+    padding: 1rem;
+    text-align: center;
+   }
+ 
+   .Iconos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 3rem;
+    float: right;
+    padding: 5px;
+    justify-content: center;
+  
+   }
+ 
+ 
+ 
+   .icono{
+    padding: 5px;
+    color: white;
+   
+   }
+   /*-----------------------------------------*/
+    
+
+    .Navegacion-principal-contenedor{
+        background-color: var(--Azul);
+       text-align: center;
+        
+    }
+
+    .Navegacion-principal-contenedor a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        
+    }
+
+    .contenedor-foter{
+   
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        background-color: var(--Azul);
+       
+  
+    }
+  
+  
+    
+    .texto{
+     
+     text-align: center;
+     color: var(--primario);
+     padding: 1rem;
+     
+    }
+  
+    .texto a{
+     text-decoration: none;
+     color: white;
+    }
+  
+    .texto .icono{
+     font-size: 2rem;
+    }
+  
+    .fin{
+     color: var(--primario);
+     text-align: center;
+     font-size: 1rem;
+    }
+
+    /*esto de arriba lo del div y footer*/
+
+    .contendor-nosotros{
+        margin: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        width: 95%;
+       text-align: center;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+       border-radius: 15px;
+       background-color: white;
+      
+ 
+    }
+
+
+    .contendor-nosotros h2{
+        color: var(--primario);
+        font-size: 1.5rem;
+        font-weight: bold;
+
+    }
+
+   
+
+    .contenedor-img img{
+        width: 80%;
+        
+       
+    }
+
+    /* animaciones*/
+
+     
+    
+    .car :hover {
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+    .navegacion :hover {
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+     .navegacion a:hover {
+   
+        color: var(--Rojo);
+    }
+
+
+    .Navegacion-principal-contenedor :hover{
+       
+        color: var(--primario);
+    }
+
+    .Iconos :hover{
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+    footer .texto :hover{
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+
+    /*las querys*/
+    @media  (max-width: 600px) {
+        .footer .contenedor-foter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+     
+        }
+     
+        .footer .texto {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            
+            padding: 0;
+        }
+     
+       .Navegacion-principal-contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+     
+       .Navegacion-principal-contenedor a{
+        margin: 0;
+        padding: 0;
+       }
+       
+     
+     
+       .otro_deporte{
+        display: grid;
+        grid-template-columns: 1fr;
+       }
+       .Section-marcas{
+        display: grid;
+        grid-template-columns: 1fr;
+       }
+     
+       .otrasmarcas{
+        display: grid;
+        grid-template-columns: 1fr;
+       }
+     
+       .otrasmarcas .marcas img{
+        width: 10%;
+       }
+     
+       .textonotros{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+       }
+     }
+
+     @media (max-width: 600px) {
+        .contenedor-header {
+            flex-direction: row;
+        }
+        .div-form {
+            order: 2; /* Cambia el orden del div form */
+        }
+        .Iconos {
+            order: 1; /* Cambia el orden del div iconos */
+           margin-left: 130px;
+        }
+     
+        .contenedor-header  {
+           display: flex;
+           flex-wrap: wrap;
+         }
+     
+         
+     
+        .div-form{
+           margin: auto 0;
+           width: 90%;
+           margin: 0 auto;
+           margin: 10px;
+           
+         }   
+        
+     }
+     
+
+     /* lo del modal*/
+
+
+.formulario{
+    text-align: left;
+    margin: 20px;
+ }
+ 
+ .div-contenedor h2{
+    font-size: 2rem;
+    color: var(--primario);
+    font-weight: bold;
+ }
+ 
+ .formulario input {
+    width: 100%;
+    border-radius: 5px;
+    
+ }
+ 
+ 
+ .formulario label {
+    font-size: 1.2rem;
+   
+    font-weight: bold;
+    
+ }
+ 
+ .parametro{
+    font-size: 1.2rem;
+    margin: 1rem;
+ }
+ 
+ .parametro input{
+   border: solid black;
+   border-radius: 5px;
+ }
+ 
+ 
+ .enviarform{
+    display: grid;
+    grid-template-rows: 1fr;
+    margin: 1rem;
+    padding: 1rem;
+ }
+ 
+ .button-env{
+    width: 60%;
+    border: solid black;
+    border-radius: 10px;
+    font-weight: bold;
+ }
+ 
+ .div-envio a{
+   text-decoration:none ;
+   color: black;
+ }
+ 
+ .div-envio {
+   text-align: center;
+   margin: 10px;
+   font-weight: bold;
+ }
+ 
+ .modal-header{
+    background-color: var(--Azul);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+ }
+ 
+ .modal-header h1{
+   
+    font-size: 5rem;
+ }
+ 
+ .button-env{
+    width: 90%;
+ }
+ 
+ .formulario{
+    font-weight: bold; 
+ }
+ 
+ .div-envio a{
+    color: var(--Azul);
+ }
+
+ @media (max-width: 600px){
+
+    .uno {
+       order: 3; /* Cambia el orden del div form */
+   }
+   .tres {
+       order: 1; /* Cambia el orden del div iconos */
+     
+   }
+ 
+  
+ }
+ .contenedor-foter{
+    padding: 10px;
+   }
+
+ .texto-nosotros {
+   padding-top: 15px;
+ }
+
+ #bus1{
+    font-size: 15px;
+    color: black;
+ }

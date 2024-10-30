@@ -1,0 +1,247 @@
+body{
+    margin: 0;
+    
+}
+:root{
+    --Azul : #233588;
+    --Rojo : #a01c1c;
+    --primario :#fab50f;
+    --fondo: #1381e1;
+   
+    }
+
+   .contenedor-header{
+  
+  
+   display: grid;
+   grid-template-columns: 0.5fr 2fr 0.5fr;
+   gap: 5px;
+   
+   background-color: var(--Rojo);
+   }
+
+
+   .contenedor-header a{
+color: white;
+    
+   }
+
+img{
+   position: relative;
+    padding: 1rem;
+    justify-self: center;
+}
+   
+    
+   
+    /*   --------------------------barra ------*/
+    .form-barra{
+        display: grid;
+        gap: 1px
+        ;
+        grid-template-columns: 4fr 1fr;
+     }
+     
+     .div-form{
+       margin: auto 0;
+     
+       
+     }
+     
+     .form-barra button  {
+     border-radius: 10px;
+     border: solid black;
+     }
+     
+     .form-barra input  {
+        border-radius: 10px;
+        border: solid black;
+     }
+     
+     
+     
+     
+     button{
+        border-radius: 10px;
+        background-color: var(--primario);
+        color: white;
+     }
+     
+       .combo {
+        padding: 1rem;
+        text-align: center;
+       }
+     
+       .Iconos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 3rem;
+        float: right;
+        padding: 5px;
+        justify-content: center;
+      
+       }
+     
+     
+     
+       .icono{
+        padding: 5px;
+        color: white;
+       
+       }
+       /*-----------------------------------------*/
+   
+
+    .Navegacion-principal-contenedor{
+        background-color: var(--Azul);
+       text-align: center;
+        
+    }
+
+    .Navegacion-principal-contenedor a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        
+    }
+
+    .contenedor-foter{
+   
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        background-color: var(--Azul);
+       
+  
+    }
+  
+  
+    
+    .texto{
+     
+     text-align: center;
+     color: var(--primario);
+     padding: 1rem;
+     
+    }
+  
+    .texto a{
+     text-decoration: none;
+     color: white;
+    }
+  
+    .texto .icono{
+     font-size: 2rem;
+    }
+  
+    .fin{
+     color: var(--primario);
+     text-align: center;
+     font-size: 1rem;
+    }
+
+
+
+    /*--------------------------------------------------*/
+
+    
+    .div-contenedor{
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 60%;
+       border: solid rgb(0, 0, 0);
+       border-radius: 15px;
+       background-color: white;
+      text-align: center;
+ 
+        
+     }
+
+     .formulario{
+        margin: 0 auto;
+   
+        width: 80%;
+        text-align: left;
+        margin: 5%;
+        margin: 0 auto;
+       
+        
+     }
+
+     .formulario input{
+        width: 100%;
+        border-radius: 5px;
+        
+    }
+
+    .button-envio{
+        
+        width: 40%;
+        border: solid black;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    .enviarform{
+        margin: 1rem;
+    }
+    .formulario .labelito{
+        font-size: 1.2rem;
+       
+        font-weight: bold;
+    }
+    .div-titulo{
+        margin: 20px;
+    }
+
+    /* animaciones*/
+
+     
+    
+    .car :hover {
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+    .navegacion :hover {
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+     .navegacion a:hover {
+   
+        color: var(--Rojo);
+    }
+
+
+    .Navegacion-principal-contenedor :hover{
+       
+        color: var(--primario);
+    }
+
+    .Iconos :hover{
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+    footer .texto :hover{
+        transform: scale(1.1);
+        color: var(--primario);
+    }
+
+    @media (max-width: 600px){
+
+        .uno {
+           order: 3; /* Cambia el orden del div form */
+       }
+       .tres {
+           order: 1; /* Cambia el orden del div iconos */
+         
+       }
+     
+      
+     }

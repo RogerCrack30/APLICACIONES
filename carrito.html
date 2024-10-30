@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/file.png">
+    <link rel="stylesheet" href="styles/stylecategoria.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>PuntoDeportivo | Carrito</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor-header ">
+            <a href="index.html" class="logo">
+                <img src="imagenes/file.png" alt="" style="width: 100px;">
+            </a>
+            
+            <div class="div-form ">
+                <form action="" class="form-barra">
+                    <input type="text" placeholder="Buscar..." name="search">
+                    <button id="bus1" type="submit"><ion-icon name="search-outline" id="icono" ></ion-icon></button>
+                </form>
+            </div>
+            
+            <div class="Iconos ">
+                <a href="login.html"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <ion-icon name="person-circle-outline" class="icono"></ion-icon>
+                </a>
+                <a href="carrito.html">
+                    <ion-icon name="cart-outline" class="icono"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="Navegacion-principal-contenedor">  
+          
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html">Nosotros</a>
+        
+        <a href="Categoria.html">Categorías</a>
+      
+    </nav>
+
+    <main>
+        <h2 class="titulo-principal" style="text-align: center; padding: 20px; color:#233588 ;">Carrito de compras</h2>
+        <div class="contenedor-carrito" style="text-align: center; ">
+            <p id="carrito-vacio" class="carrito-vacio" style="font-size: 3rem; color:#a01c1c ;">Tu carrito está vacío :c  <br>
+            <img src="imagenes/iconos/carro.png" alt="" style="width: 200px;">
+            <i class="bi bi-emoji-frown"></i> </p>
+
+            <div id="carrito-productos" class="carrito-productos disabled">
+                <!-- Esto se va a completar con el JS -->
+            </div>
+            <div class="carrito-acciones-derecha">
+                <div class="carrito-acciones-total disabled" id="contenedortotales">
+                    <div class="totales">
+                        <p>Sub-Total:</p><p id="total">$3000</p>
+                    </div>
+                    
+                    <div class="totales">
+                        <p>Impuestos:</p>
+                        <p id="Impuestos">$3000</p>
+                    </div>
+                    
+                    <div class="totales">
+                        <p>Total:</p>
+                        <p id="final">$3000</p>
+                    </div>
+                    
+                </div>
+              
+            </div>
+            <div id="carrito-acciones" class="carrito-acciones disabled">
+                <div class="carrito-acciones-izquierda">
+                    <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    <a href="categoria.html" class="Seguir">Seguir Comprando</a>
+                    <a href="pago.html" class="Seguir">Finalizar Compra</a>
+
+                </div>
+               
+            </div>
+
+            <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+
+        </div>
+
+
+
+<!-- Button trigger modal -->
+   <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal -->
+  <!--</button>-->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Mi Cuenta</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="div-contenedor">
+    
+           
+    
+                <form action="" class="formulario">
+        
+                    <div class="Contenedor-parametros">
+        
+                        <div class="parametro">
+                            <label for="" class="labelito" >Dirección de correo electrónico *</label><br>
+                            <input type="email" class="Datos" id="correo" required>
+                        </div>
+        
+                        <div class="parametro">
+                            <label for="" class="labelito">Contraseña *</label><br>
+                            <input type="password" class="Datos"  id="contrasena" required>
+                        </div><br>
+    
+                        <label for="">(*)Llenar todos los campos</label><br>
+        
+                    </div>
+        
+                    <div class="enviarform">
+    
+                        <div class="div-envio">
+                            <button class="button-env" id="botoncito"  >Iniciar sesión</button>
+                        </div>
+                        <div class="fallas" id="fallas">
+
+                        </div>
+                       
+                        <div  class="div-envio">
+                            <a >¿Olvidaste tu contraseña?</a> <input type="checkbox" name="" id="">
+                        </div>
+    
+                        <div  class="div-envio"  > <p>¿No tienes una cuenta?</p>
+                           <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal2">Registrate</a>
+                        </div>
+                       
+                       
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  
+  </div>
+        
+        
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Mi Cuenta</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="div-contenedor">
+            
+                   
+            
+                        <form action="" class="formulario">
+                
+                            <div class="Contenedor-parametros">
+                
+                                <div class="parametro">
+                                    <label for="" class="labelito">Nombre*</label><br>
+                                    <input type="text" class="Datos">
+                                </div>
+                
+                                <div class="parametro">
+                                    <label for="" class="labelito">Apellido *</label><br>
+                                    <input type="text" class="Datos">
+                                </div>
+            
+                                <div class="parametro">
+                                    <label for="" class="labelito">Dirección de correo electrónico *</label><br>
+                                    <input type="text" class="Datos">
+                                </div>
+            
+                                <div class="parametro">
+                                    <label for="" class="labelito">Fecha de nacimiento</label>
+                                    <input type="date" class="Datos">
+                                </div>
+            
+                               
+            
+                                <div class="parametro">
+                                    <label for="" class="labelito">Contraseña *</label><br>
+                                    <input type="text" class="Datos">
+                                </div>
+            
+                                <div class="parametro">
+                                    <label for="" class="labelito">Confirmar Contraseña *</label><br>
+                                    <input type="text" class="Datos">
+                                </div>
+            
+                                <label for="">(*)Llenar todos los campos</label><br>
+                
+                            </div>
+                
+                            <div class="enviarform">
+                                
+                                <button class="button" >Registrarse</button>
+                               
+                            </div>
+                
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+     
+
+    
+
+    <footer class="footer">
+
+        <div class="contenedor-foter">
+    
+            <div class="texto uno">
+    
+                <h2>Punto Deportivo</h2>
+                <ion-icon name="logo-facebook" class="icono"></ion-icon>
+                <ion-icon name="logo-instagram" class="icono"></ion-icon>
+                <ion-icon name="logo-whatsapp" class="icono"></ion-icon>
+                <p class="fin">© 2024 PuntoDeportivo. <br>
+                    Todos los derechos reservados</p>
+    
+    
+            </div>
+    
+            <div class="texto dos">
+                <h2>Elije tu Deporte</h2>
+                <a href="">Fútbol</a><br>
+                <a href="">Baloncesto </a><br>
+                <a href="">Atletismo</a><br>
+                <a href="">Béisbol</a><br>
+            </div>
+    
+            <div class="texto tres">
+                <h2>Sobre Nosotros</h2>
+                <a href="index.html">Inicio</a><br>
+                <a href="Nosotros.html">Nosotros</a><br>
+                <a href="contactos.html">Contacto</a><br>
+                <a href="Categoria.html">Categorías</a>
+    
+            </div>
+    
+           
+    
+            
+        </div>
+    
+        
+    
+    </footer>
+    
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+</html>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="js/carrito.js"> </script>
+
+
+<style>
+    body{
+        background-color: aliceblue;
+        
+    }
+.fallas p{
+   color: red; 
+   text-align: center;
+}
+  
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const usuarios = [
+        { id:"01"  , email: "omar@gmail.com", password: "123456" , tipo:"admin"},
+        {  id:"02" , email: "naza@gmail.com", password: "123456" , tipo:"admin" },
+        {  id:"03" , email: "fran@gmail.com", password: "123456" , tipo:"cliente"},
+    ];
+
+    const emailInput = document.getElementById('correo');
+    const passwordInput = document.getElementById('contrasena');
+    const boton = document.getElementById("botoncito");
+    const fallas = document.getElementById("fallas");
+
+    function login(event) {
+        // Evitar el comportamiento por defecto del botón (enviar formulario si está dentro de un form)
+        event.preventDefault();
+
+        // Obtener los valores de los inputs dentro de la función
+        const emailValue = emailInput.value;
+        const passwordValue = passwordInput.value;
+
+        // Verificar si los datos coinciden con alguno de los usuarios
+        const usuarioEncontrado = usuarios.find(usuario => usuario.email === emailValue && usuario.password === passwordValue );
+
+      fallas.innerHTML = "";
+        
+      if (usuarioEncontrado) {
+            if (usuarioEncontrado.tipo === "admin") {
+                window.location.href = "admi.html"; // Cambia "admin.html" por la URL de destino para administradores
+            } else if (usuarioEncontrado.tipo === "cliente") {
+                window.location.href = "index.html"; // Cambia "usuario.html" por la URL de destino para usuarios
+            }
+        } else {
+            if (!emailValue || !passwordValue) {
+                const div = document.createElement("div");
+                div.className = "mensaje";
+                div.innerHTML = "<p>Por favor complete todos los campos</p>";
+                fallas.appendChild(div);
+            } else {
+                const div = document.createElement("div");
+                div.className = "mensaje";
+                div.innerHTML = "<p>Correo electrónico o contraseña incorrectos.</p>";
+                fallas.appendChild(div);
+            }
+        }
+    }
+
+    boton.addEventListener("click", login);
+});
+
+
+</script>

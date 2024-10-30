@@ -1,0 +1,591 @@
+
+
+
+:root{
+    --Azul : #233588;
+    --Rojo : #a01c1c;
+    --primario :#fab50f;
+   
+   
+    }
+
+   .contenedor-header{
+  
+  
+   display: grid;
+   grid-template-columns: 0.5fr 2fr 0.5fr;
+   gap: 5px;
+   
+   background-color: var(--Rojo);
+   }
+
+
+   .contenedor-header a{
+color: white;
+    
+   }
+
+img{
+   position: relative;
+    padding: 1rem;
+    justify-self: center;
+}
+   
+    
+   /*   --------------------------barra ------*/
+.form-barra{
+   display: grid;
+   gap: 1px
+   ;
+   grid-template-columns: 4fr 1fr;
+}
+
+.div-form{
+  margin: auto 0;
+
+  
+}
+
+.form-barra button  {
+border-radius: 10px;
+border: solid black;
+}
+
+.form-barra input  {
+   border-radius: 10px;
+   border: solid black;
+}
+
+
+
+
+button{
+   border-radius: 10px;
+   background-color: var(--primario);
+   color: white;
+}
+
+  .combo {
+   padding: 1rem;
+   text-align: center;
+  }
+
+  .Iconos{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   font-size: 3rem;
+   float: right;
+   padding: 5px;
+   justify-content: center;
+ 
+  }
+
+
+
+  .icono{
+   padding: 10px;
+   color: white;
+  
+  }
+  /*-----------------------------------------*/
+   
+
+    .Navegacion-principal-contenedor{
+        background-color: var(--Azul);
+       text-align: center;
+        
+    }
+
+    .Navegacion-principal-contenedor a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        
+    }
+
+ 
+    
+  
+
+   .fondo{
+     
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+   }
+
+   
+
+  
+
+   .Contenido-promocion a{
+      text-decoration: none;
+      
+      margin: 30px;
+     
+      border-radius: 20px;
+      background-color: var(--Rojo);
+      color: white;
+   }
+
+
+   .Div-promociones{
+      text-align: center;
+      font-size: 1.5rem;
+   }
+
+   .Div-promociones a{
+      text-decoration: none;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 20px;
+      background-color: var(--Rojo);
+      color: white;
+      font-size: 1rem;
+   }
+
+
+   .otro_deporte{
+      
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+
+     
+      
+   }
+
+   .Deporte{
+   
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      padding: 20px;
+   }
+
+   .Deporte{
+      width: 90%;
+      margin: auto;
+   }
+
+
+   .otrasmarcas{
+      background-color: var(--primario);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+     
+   }
+
+   .marcas{
+      text-align: center;
+      margin:0 auto;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px rgba(146, 142, 142, 0.5);
+      width: 90%;
+     
+   }
+
+   h2{
+      text-align: center;
+     color: var(--primario);
+   }
+
+   .textonotros{
+      margin: 50px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+   }
+
+ .textos{
+   padding: 10px;
+   margin: 10px;
+   
+ }
+
+ .textos h2{
+   color: var(--primario);
+   
+ }
+
+  
+   /*-------------------------------------------------*/
+   .contenedor-foter{
+   
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      background-color: var(--Azul);
+     
+
+  }
+
+
+  
+  .texto{
+   
+   text-align: center;
+   color: var(--primario);
+   padding: 1rem;
+   
+  }
+
+  .texto a{
+   text-decoration: none;
+   color: white;
+  }
+
+  .texto .icono{
+   font-size: 2rem;
+  }
+
+  .fin{
+   color: var(--primario);
+   text-align: center;
+   font-size: 1rem;
+  }
+
+ 
+main{
+   margin: 10px;
+   background-color: white;
+   border-radius: 10px;
+}
+
+p{
+   color: black;
+}
+
+
+.Div-promocion p{
+   color: white;
+}
+
+/* animaciones*/
+
+     
+    
+.car :hover {
+   transform: scale(1.1);
+   color: var(--primario);
+}
+
+.navegacion :hover {
+   transform: scale(1.1);
+   color: var(--primario);
+}
+
+.navegacion a:hover {
+
+   color: var(--Rojo);
+}
+
+
+.Navegacion-principal-contenedor :hover{
+  
+   color: var(--primario);
+}
+
+.Iconos :hover{
+   transform: scale(1.1);
+   color: var(--primario);
+}
+
+footer .texto :hover{
+   transform: scale(1.1);
+   color: var(--primario);
+}
+
+/* medias querys*/
+@media  (max-width: 600px) {
+   .footer .contenedor-foter {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+      
+
+   }
+
+   .footer .texto {
+       width: 100%;
+       text-align: center;
+       margin-bottom: 20px;
+       
+       padding: 0;
+   }
+
+  .Navegacion-principal-contenedor{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .Navegacion-principal-contenedor a{
+   margin: 0;
+   padding: 0;
+  }
+  
+
+
+  .otro_deporte{
+   display: grid;
+   grid-template-columns: 1fr;
+  }
+  .Section-marcas{
+   display: grid;
+   grid-template-columns: 1fr;
+  }
+
+  .otrasmarcas{
+   display: grid;
+   grid-template-columns: 1fr;
+  }
+
+  .otrasmarcas .marcas img{
+   width: 10%;
+  }
+
+  .textonotros{
+   display: grid;
+   grid-template-columns: 1fr;
+   margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+   .contenedor-header {
+       flex-direction: row;
+   }
+   .div-form {
+       order: 2; /* Cambia el orden del div form */
+   }
+   .Iconos {
+       order: 1; /* Cambia el orden del div iconos */
+      margin-left: 130px;
+   }
+
+   .contenedor-header  {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    
+
+   .div-form{
+      margin: auto 0;
+      width: 90%;
+      margin: 0 auto;
+      margin: 10px;
+      
+    }   
+   
+}
+
+/* el video cochon*/
+
+
+.Contenido-promocion p{
+   color: white;
+   font-size: 1.7rem;
+}
+
+.Contenido-promocion a{
+   padding: 10px;
+}
+
+.Div-promocion {
+   position: relative;
+   width: 100%;
+   height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
+   overflow: hidden;
+}
+
+.video-promocion {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Asegura que el video cubra toda la sección */
+   z-index: 1; /* Asegura que el video esté detrás del contenido */
+}
+
+.Contenido-promocion {
+   position: relative;
+   z-index: 2; /* Asegura que el contenido esté por delante del video */
+   color: white; /* Color del texto para asegurarse de que sea visible */
+   text-align: center;
+   padding: 20px;
+   margin-top: 15vh;
+}
+
+.capa {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Capa semitransparente para mejorar la legibilidad del contenido */
+   z-index: 1; /* Asegura que la capa esté por delante del video pero detrás del contenido */
+}
+
+
+
+
+ .textos{
+   text-align: center;
+}
+
+.Div-promociones h2{
+   padding: 30px;
+   color: var(--Azul);
+}
+
+.h2tx{
+   padding: 30px;
+   color: var(--Azul);
+}
+
+
+/* lo del modal*/
+
+
+.formulario{
+   text-align: left;
+   margin: 20px;
+}
+
+.div-contenedor h2{
+   font-size: 2rem;
+   color: var(--primario);
+   font-weight: bold;
+}
+
+.formulario input {
+   width: 100%;
+   border-radius: 5px;
+   
+}
+
+
+.formulario label {
+   font-size: 1.2rem;
+  
+   font-weight: bold;
+   
+}
+
+.parametro{
+   font-size: 1.2rem;
+   margin: 1rem;
+}
+
+.parametro input{
+  border: solid black;
+  border-radius: 5px;
+}
+
+
+.enviarform{
+   display: grid;
+   grid-template-rows: 1fr;
+   margin: 1rem;
+   padding: 1rem;
+}
+
+.button-env{
+   width: 60%;
+   border: solid black;
+   border-radius: 10px;
+   font-weight: bold;
+}
+
+.div-envio a{
+  text-decoration:none ;
+  color: black;
+}
+
+.div-envio {
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.modal-header{
+   background-color: var(--Azul);
+   color: white;
+   text-align: center;
+   font-size: 2rem;
+}
+
+.modal-header h1{
+  
+   font-size: 5rem;
+}
+
+.button-env{
+   width: 90%;
+}
+
+.formulario{
+   font-weight: bold; 
+}
+
+.div-envio a{
+   color: var(--Azul);
+}
+
+
+
+.iconosinfo{
+   width: 150px;
+}
+
+
+.textonosotros{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+   .textonosotros{
+      display: grid;
+      grid-template-columns: 1fr;
+   }
+}
+
+
+
+@media (max-width: 600px){
+
+   .uno {
+      order: 3; /* Cambia el orden del div form */
+  }
+  .tres {
+      order: 1; /* Cambia el orden del div iconos */
+    
+  }
+
+
+  .contenedor-foter{
+   padding: 10px;
+  }
+
+ 
+}
+
+.iconoform{
+   font-size: 15px;
+   color: black;
+}

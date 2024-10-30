@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+
+   
+    
+        
+ <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile-tab-pane" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Perfil</a>
+        
+    
+    
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="contenedor-carrito" style="width: 200px; background-color: #007bff;">
+                <h2 class="titulo-principal" style="text-align: center; padding: 20px;">Carrito</h2>
+               
+            </div>
+        </div>
+    </div>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const profileTab = document.getElementById('profile-tab');
+            const profileTabPane = document.getElementById('profile-tab-pane');
+
+            let tabTimeout;
+
+            const showTab = () => {
+                clearTimeout(tabTimeout);
+                $(profileTab).tab('show');
+            };
+
+            const hideTab = () => {
+                tabTimeout = setTimeout(() => {
+                    $(profileTabPane).removeClass('show active');
+                    $(profileTab).removeClass('active');
+                }, 200); // Timeout to allow for smooth transition
+            };
+
+            profileTab.addEventListener('mouseover', showTab);
+            profileTab.addEventListener('mouseout', hideTab);
+            profileTabPane.addEventListener('mouseover', showTab);
+            profileTabPane.addEventListener('mouseout', hideTab);
+        });
+    </script>
+       <style>
+        .nav-pills .nav-link {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-pills .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .nav-pills .nav-link.disabled {
+            pointer-events: none;
+            background-color: #e9ecef;
+        }
+    </style>
+</body>
+</html>
+ <!-- Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script src="js/carrito.js"></script>

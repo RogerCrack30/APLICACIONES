@@ -1,0 +1,24 @@
+.div-contenedor{
+    margin: 50px;
+    background-color: black;
+}
+
+@media (max-width: 600px){
+
+    .uno {
+       order: 3; /* Cambia el orden del div form */
+   }
+   .tres {
+       order: 1; /* Cambia el orden del div iconos */
+     
+   }
+ 
+   .contenedor-foter{
+    padding: 10px;
+   }
+ }
+
+ #bus1{
+    font-size: 15px;
+    color: black;
+ }
